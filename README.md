@@ -36,7 +36,10 @@ Translates input text into a target language.
 #### Request Body
 
 ```json
-{
-  "text": "Hello world",
-  "target": "fr"
-}
+curl -X POST "https://livetransaltion-1007357002178.us-central1.run.app/translate" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source": "en",
+    "target": "hi",
+    "text": "What is your name?"
+  }'
